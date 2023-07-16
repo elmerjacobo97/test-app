@@ -1,0 +1,69 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.Counter-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Counter-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.Counter-button:active {
+  background-color: #0056b3;
+}
+
+.Counter-value {
+  font-size: 2em;
+  color: #333;
+}
+
+.pokemon-grid {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  /* Por defecto (para dispositivos muy pequeños), tendrá solo 1 columna */
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/* Cuando el dispositivo tiene al menos 600px de ancho (típico para tablets), cambia a 3 columnas */
+@media (min-width: 600px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Cuando el dispositivo tiene al menos 900px de ancho (típico para desktops), cambia a 4 columnas */
+@media (min-width: 900px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pokemon-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+}
